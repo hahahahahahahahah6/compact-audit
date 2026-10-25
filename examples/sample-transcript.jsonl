@@ -1,0 +1,3 @@
+{"content":"Decision: migrations are forward-only; never roll back a shipped migration."}
+{"text":"Edited src/migrate.py"}
+{"message":"Error: synthetic migration check failed with code 17"}
