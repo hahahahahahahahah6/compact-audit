@@ -8,14 +8,14 @@ Python 3.9+; MIT licensed.
 
 ## Usage
 
-Install the locally built wheel with `python -m pip install --no-index dist/compact_audit-0.1.0-py3-none-any.whl`.
+Install the locally built wheel with `python3 -m pip install --no-index dist/compact_audit-0.1.0-py3-none-any.whl`.
 
 ```sh
 compact-audit --version
 compact-audit audit examples/sample-transcript.jsonl examples/sample-summary.md
 compact-audit audit examples/sample-transcript.jsonl examples/sample-summary.md --json
 compact-audit audit transcript.txt summary.md --min-severity medium
-python -m compact_audit --help
+python3 -m compact_audit --help
 ```
 
 The included examples are entirely synthetic. Their full-coverage summary
@@ -101,10 +101,10 @@ Runtime and tests use only the Python standard library. Packaging uses setuptool
 and wheel through `pyproject.toml`, with the standard `build` frontend.
 
 ```sh
-PYTHONPATH=src python -m unittest discover -s tests -v
-python -m build
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+python3 -m build
 ```
 
 For an offline environment with build, setuptools, and wheel already installed,
-use `python -m build --no-isolation` to avoid dependency downloads. Build outputs
+use `python3 -m build --no-isolation` to avoid dependency downloads. Build outputs
 are artifacts under `dist/`, not source files.
